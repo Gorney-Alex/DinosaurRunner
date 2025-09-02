@@ -93,6 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4603327645787225696}
   - component: {fileID: 5717424408692604118}
+  - component: {fileID: 2703566601975162022}
+  - component: {fileID: 885264035411534459}
   m_Layer: 0
   m_Name: GreenLand
   m_TagString: Untagged
@@ -135,3 +137,36 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4364591805166305610}
   m_Enabled: 1
+--- !u!65 &2703566601975162022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931900055791949358}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.4157643, y: 6.6339703, z: 10.0160885}
+  m_Center: {x: -0.07984185, y: -2.045723, z: 0.011480331}
+--- !u!114 &885264035411534459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931900055791949358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7afe4d904753a4499add90f5201fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
