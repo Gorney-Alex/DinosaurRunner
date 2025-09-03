@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -17,6 +16,7 @@ public class ObjectPool : MonoBehaviour
             GameObject spawned = Instantiate(prefab, _container.transform);
             spawned.SetActive(false);
             
+            ObjectDataBase.AddToList(spawned);
             _pool.Add(spawned);
         }
     }
