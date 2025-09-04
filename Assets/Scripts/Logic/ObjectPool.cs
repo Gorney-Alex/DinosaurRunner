@@ -2,28 +2,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class ObjectPool : MonoBehaviour
+public class ObjectPool<T> : MonoBehaviour where T : Component
 {
-    [SerializeField] private GameObject _container;
+    [SerializeField] private Transform _container;
     [SerializeField] private int _amountObjects;
     
-    private List<GameObject> _pool = new List<GameObject>();
+    private List<T> _pool = new List<T>();
 
-    protected void Intialize(GameObject prefab)
+    protected void Intialize(T prefab)
     {
         for (int i = 0; i < _amountObjects; i++)
         {
-            GameObject spawned = Instantiate(prefab, _container.transform);
-            spawned.SetActive(false);
-            
-            ObjectDataBase.AddToList(spawned);
+            T spawned = Instantiate(prefab, _container.transform);
+            spawned.gameObject.SetActive(false);
+
             _pool.Add(spawned);
         }
     }
 
-    protected bool TryGetObject(out GameObject result)
+    protected bool TryGetObject(out T result)
     {
-        result = _pool.FirstOrDefault(obj => obj.activeSelf == false);
+        result = _pool.FirstOrDefault(obj => obj.gameObject.activeSelf == false);
         return result != null;
     }
 
@@ -31,7 +30,7 @@ public class ObjectPool : MonoBehaviour
     {
         foreach (var obj in _pool)
         {
-            obj.SetActive(false);
+            obj.gameObject.SetActive(false);
         }
     }
 }
