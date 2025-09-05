@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ObjectMovementer : MonoBehaviour
 {
-    private static List<Transform> _objects = new List<Transform>();
+    private List<Transform> _objects;
     [SerializeField] private Transform _container;
 
     private void Start()
     {
+        _objects = new List<Transform>();
+        
         foreach (Transform child in _container)
         {
             _objects.Add(child);
@@ -26,7 +28,7 @@ public class ObjectMovementer : MonoBehaviour
         {
             if (obj.gameObject.activeSelf)
             {
-                obj.transform.Translate(Vector3.forward * 20 * Time.deltaTime, Space.World);
+                obj.transform.Translate(Vector3.forward * 10 * Time.deltaTime, Space.World);
             }
         }
     }

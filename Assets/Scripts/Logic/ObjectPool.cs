@@ -7,10 +7,14 @@ public class ObjectPool<T> : MonoBehaviour where T : Component
     [SerializeField] private Transform _container;
     [SerializeField] private int _amountObjects;
     
-    private List<T> _pool = new List<T>();
+    private List<T> _pool;
+    
+    protected IReadOnlyList<T> Pool => _pool;
 
     protected void Intialize(T prefab)
     {
+        _pool = new List<T>(_amountObjects);
+        
         for (int i = 0; i < _amountObjects; i++)
         {
             T spawned = Instantiate(prefab, _container.transform);

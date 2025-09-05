@@ -9,7 +9,6 @@ public class WallDisabler : MonoBehaviour
         if (other.TryGetComponent(out WorldObject obj))
         {
             obj.gameObject.SetActive(false);
-            obj.transform.position = _container.transform.position;
         }
     }
 }
