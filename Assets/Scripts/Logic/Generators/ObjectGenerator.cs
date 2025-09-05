@@ -6,9 +6,8 @@ public class ObjectGenerator<T> : ObjectPool<T> where T : Component
     [SerializeField] protected float _secondsBetweenSpawns;
     
     protected float _currentTime = 0;
-    
-    private Vector3 _lastSpawnedPosition;
-    private bool _isFirstSpawn = true;
+    private Vector3 _lastSpawnPosition;
+    private bool _firstSpawn = true;
     
     private void Awake()
     {
@@ -25,20 +24,20 @@ public class ObjectGenerator<T> : ObjectPool<T> where T : Component
             {
                 Vector3 spawnPosition;
                 
-                if (_isFirstSpawn)
+                if (_firstSpawn)
                 {
                     spawnPosition = initialPosition;
-                    _isFirstSpawn = false;
+                    _firstSpawn = false;
                 }
                 else
                 {
-                    spawnPosition = _lastSpawnedPosition + new Vector3(0f, 0f, -distance);
+                    spawnPosition = _lastSpawnPosition + new Vector3(0f, 0f, -distance);
                 }
                 
                 obj.transform.position = spawnPosition;
                 obj.gameObject.SetActive(true);
                 
-                _lastSpawnedPosition = spawnPosition;
+                _lastSpawnPosition = spawnPosition;
                 
                 _currentTime = 0f;
             }
