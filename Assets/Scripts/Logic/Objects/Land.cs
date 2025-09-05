@@ -1,4 +1,4 @@
-﻿public class Land : WorldObject, ICanBeSpawned
+﻿public class Land : WorldObject
 {
         
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +24,6 @@ public class ObjectMovementer : MonoBehaviour
     {
         foreach (var obj in _objects)
         {
-            Debug.Log("I movement");
             if (obj.gameObject.activeSelf)
             {
                 obj.transform.Translate(Vector3.forward * 20 * Time.deltaTime, Space.World);

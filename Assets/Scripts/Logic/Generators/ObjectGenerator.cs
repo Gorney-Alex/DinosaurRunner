@@ -10,7 +10,7 @@ public class ObjectGenerator<T> : ObjectPool <T> where T : Component
     
     protected float _currentTime = 0;
     
-    private void Start()
+    private void Awake()
     {
         Intialize(_objectPrefab);
     }

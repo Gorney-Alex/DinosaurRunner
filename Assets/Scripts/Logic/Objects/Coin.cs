@@ -1,4 +1,4 @@
-﻿public class Coin : WorldObject, ICanBeSpawned
+﻿public class Coin : WorldObject
 {
         
 }

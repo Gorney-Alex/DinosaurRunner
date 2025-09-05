@@ -166,10 +166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70619071dbbcaf41b72b6fdba56cb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _amountObjects: 0
-  _objectPrefab: {fileID: 0}
-  _secondsBetweenSpawns: 0
+  _container: {fileID: 1683935233}
+  _amountObjects: 5
+  _objectPrefab: {fileID: 8951257215449455205, guid: b18dd719650993b4ba69c22b5a8497f5, type: 3}
+  _secondsBetweenSpawns: 1.5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,10 +308,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd20b6872d99b394cb03ea7801120285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _amountObjects: 0
-  _objectPrefab: {fileID: 0}
-  _secondsBetweenSpawns: 0
+  _container: {fileID: 1683935233}
+  _amountObjects: 3
+  _objectPrefab: {fileID: 1423148684638132498, guid: 4b113e61274187343beadf147b30f33e, type: 3}
+  _secondsBetweenSpawns: 4
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,10 +755,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306472479067efd42aed7d726ba09a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _container: {fileID: 0}
-  _amountObjects: 0
-  _objectPrefab: {fileID: 0}
-  _secondsBetweenSpawns: 0
+  _container: {fileID: 1683935233}
+  _amountObjects: 5
+  _objectPrefab: {fileID: 6987423198773610032, guid: 9179a43e2be971a4998c23ed8b5b29b7, type: 3}
+  _secondsBetweenSpawns: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

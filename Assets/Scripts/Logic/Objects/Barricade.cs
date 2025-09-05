@@ -1,4 +1,4 @@
-﻿public class Barricade : WorldObject, ICanBeSpawned
+﻿public class Barricade : WorldObject
 {
     
 }

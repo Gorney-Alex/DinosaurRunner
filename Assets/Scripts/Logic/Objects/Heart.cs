@@ -1,4 +1,4 @@
-﻿public class Heart : WorldObject, ICanBeSpawned
+﻿public class Heart : WorldObject
 {
         
 }
