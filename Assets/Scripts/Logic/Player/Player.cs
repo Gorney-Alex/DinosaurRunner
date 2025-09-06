@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
         _collisionSystem.OnCoinCollected += CollectCoin;
         _collisionSystem.OnHeartCollected += CollectHeart;
         _collisionSystem.OnBarricadeCollision += TakeDamage;
+
+        _liveSystem.Die += Die;
     }
     
     private void OnDisable()
@@ -24,6 +26,8 @@ public class Player : MonoBehaviour
         _collisionSystem.OnCoinCollected -= CollectCoin;
         _collisionSystem.OnHeartCollected -= CollectHeart;
         _collisionSystem.OnBarricadeCollision -= TakeDamage;
+        
+        _liveSystem.Die -= Die;
     }
 
     private void Awake()

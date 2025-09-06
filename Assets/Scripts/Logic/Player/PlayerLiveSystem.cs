@@ -8,6 +8,8 @@ public class PlayerLiveSystem : MonoBehaviour
     
     private int _currentHeartAmount;
 
+    public UnityAction Die;
+
     private void Awake()
     {
         _currentHeartAmount = _maxHeartAmount;
@@ -29,7 +31,7 @@ public class PlayerLiveSystem : MonoBehaviour
 
         if (_currentHeartAmount <= 0)
         {
-            
+            Die?.Invoke();
         }
     }
     
