@@ -1,9 +1,17 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerLiveSystem : MonoBehaviour
 {
     [SerializeField] private int _maxHeartAmount;
-    [SerializeField] private int _currentHeartAmount;
+    
+    private int _currentHeartAmount;
+
+    private void Awake()
+    {
+        _currentHeartAmount = _maxHeartAmount;
+    }
 
     public void AddHeart(int heartAmount)
     {

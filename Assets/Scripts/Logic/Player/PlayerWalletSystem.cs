@@ -1,9 +1,16 @@
+using System;
 using UnityEngine;
 
 public class PlayerWalletSystem : MonoBehaviour
 {
     [SerializeField] private int _startAmountOfMoney;
-    [SerializeField] private int _currentAmountOfMoney;
+    
+    private int _currentAmountOfMoney;
+
+    private void Awake()
+    {
+        _currentAmountOfMoney = _startAmountOfMoney;
+    }
 
     public void AddMoney(int amount)
     {

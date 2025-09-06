@@ -7,9 +7,9 @@ public class PlayerMovementsSystem : MonoBehaviour
 
     private Rigidbody _playerRigidbody;
 
-    public PlayerMovementsSystem(Rigidbody playerRigidbody)
+    private void Awake()
     {
-        _playerRigidbody = playerRigidbody;
+        _playerRigidbody = GetComponent<Rigidbody>();
     }
 
     public void Jump()
